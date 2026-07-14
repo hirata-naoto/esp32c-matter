@@ -1,0 +1,29 @@
+menu "Border Router Configuration"
+
+config BR_WIFI_SSID
+    string "Backbone WiFi SSID"
+    default "myhome"
+    help
+        SSID of the home/office WiFi network used as the Thread backbone.
+
+config BR_WIFI_PASSWORD
+    string "Backbone WiFi Password"
+    default ""
+    help
+        Password for the backbone WiFi network (WPA2-PSK).
+
+config BR_THREAD_NETWORK_NAME
+    string "Thread Network Name Prefix"
+    default "ESP-Thread"
+    help
+        Prefix for the auto-generated Thread network name.
+        The last two bytes of the board MAC address are appended
+        (e.g. "ESP-Thread-A1B2").
+
+config ENABLE_MATTER_CONSOLE
+    bool "Enable Matter diagnostic console"
+    default y
+    help
+        Enable the Matter CLI console over UART for diagnostics.
+
+endmenu
