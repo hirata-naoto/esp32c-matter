@@ -17,14 +17,14 @@ extern "C" {
 typedef void *app_driver_handle_t;
 
 /**
- * Initialise the LED GPIO.
+ * Initialize the LED GPIO.
  *
  * @return Opaque driver handle, or NULL on failure.
  */
 app_driver_handle_t app_driver_light_init(void);
 
 /**
- * Initialise the factory-reset button.
+ * Initialize the factory-reset button.
  *
  * A long press (> 3 s) erases Matter commissioning data and reboots.
  *

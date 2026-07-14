@@ -30,7 +30,7 @@ app_driver_handle_t app_driver_light_init(void)
     ESP_ERROR_CHECK(gpio_config(&cfg));
     gpio_set_level(pin, 0); /* Start with LED off */
 
-    ESP_LOGI(TAG, "LED initialised on GPIO%d", (int)pin);
+    ESP_LOGI(TAG, "LED initialized on GPIO%d", (int)pin);
     return (app_driver_handle_t)(uintptr_t)pin;
 }
 
@@ -72,7 +72,7 @@ app_driver_handle_t app_driver_button_init(void)
         return NULL;
     }
 
-    ESP_LOGI(TAG, "Button initialised on GPIO%d (long-press >3 s = factory reset)",
+    ESP_LOGI(TAG, "Button initialized on GPIO%d (long-press >3 s = factory reset)",
              CONFIG_MTD_BUTTON_GPIO);
     return (app_driver_handle_t)btn;
 }
