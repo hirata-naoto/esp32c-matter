@@ -1,0 +1,28 @@
+menu "Matter Thread Device Configuration"
+
+config MTD_LED_GPIO
+    int "LED GPIO number"
+    range 0 21
+    default 8
+    help
+        GPIO number for the on/off status LED.
+        XIAO ESP32C5 / ESP32C6: connect an LED (with resistor) to this pin.
+        Default is GPIO8 – adjust to match your actual wiring.
+
+config MTD_BUTTON_GPIO
+    int "Factory-reset button GPIO number"
+    range 0 21
+    default 9
+    help
+        GPIO number for the factory-reset button.
+        On XIAO boards the BOOT button is on GPIO9 (active-low).
+        A long press (> 3 s) erases commissioning data and reboots.
+
+config ENABLE_MATTER_CONSOLE
+    bool "Enable Matter diagnostic console"
+    default y
+    help
+        Enable the Matter CLI console over UART.
+        Useful during development; can be disabled for production builds.
+
+endmenu
